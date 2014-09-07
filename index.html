@@ -394,14 +394,44 @@ a[href]:after {
  	text-align: justify;
  }
 
+ .show-print {
+  display: none !important;
+ }
+
+ .contact-print a {
+  position: relative !important; 
+  top: 10px !important;
+ }
+
  @media print {
     .box {
       padding-bottom: 0;
     }
 
-    .projects img {
-      display: none !important;
+    .projects img, .no-print {
+      display: none;
     }
+
+    .projects a {
+      padding: 5px !important;
+    }
+
+    .skills .clearfix {
+      padding: 0;
+    }
+
+    .skills .skill {
+      padding: 5px;
+    }
+
+    .show-print {
+      display: block !important;
+    }
+
+    .contact-print a {
+      position: relative; top: 0;
+    }
+
  }
 
     </style>
@@ -497,35 +527,48 @@ a[href]:after {
               <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
               <div class="title only pull-right">ryeballar@gmail.com</div>
             </div>
+
             <div class="contact-item">
               <div class="icon pull-left text-center">
                 <span class="fa fa-stack-overflow fa-fw"></span>
-                <!-- <img src="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=fd7230a85918" style="width: 38px; height: 40px" /> -->
               </div>
-              <!-- <div class="title pull-right">Stackoverflow</div> -->
-              <div class="description pull-right"><a href="http://stackoverflow.com/users/3450034/ryeballar" target="_blank" style="position: relative; top: 10px">Stackoverflow</a></div>
+              <div class="description pull-right">
+                <a href="http://stackoverflow.com/users/3450034/ryeballar" target="_blank" style="position: relative; top: 10px" class="no-print">
+                  Stackoverflow
+                </a>
+                <span class="show-print" style="display: none">Stackoverflow:<br>http://stackoverflow.com/users/3450034/ryeballar</span>
+              </div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-github-square fa-fw"></span></div>
               <!-- <div class="title pull-right">Github</div> -->
-              <div class="description pull-right"><a href="https://github.com/ryeballar" target="_blank" style="position: relative; top: 10px">Github</a></div>
+              <div class="description pull-right">
+                <a href="https://github.com/ryeballar" target="_blank" style="position: relative; top: 10px" class="no-print">Github</a>
+                <span class="show-print" style="display: none">Github:<br>https://github.com/ryeballar</span>
+              </div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-linkedin-square fa-fw"></span></div>
               <!-- <div class="title pull-right">Linedin</div> -->
-              <div class="description pull-right"><a href="http://ph.linkedin.com/pub/ryan-eballar/68/685/86" target="_blank" style="position: relative; top: 10px">Linkedin</a></div>
+              <div class="description pull-right">
+                <a href="http://ph.linkedin.com/pub/ryan-eballar/68/685/86" target="_blank" style="position: relative; top: 10px" class="no-print">Linkedin</a>
+                <span class="show-print" style="display: none">Linkedin:<br>http://ph.linkedin.com/pub/ryan-eballar/68/685/86</span>
+              </div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center" style="padding: 10px">
                 <!-- <span class="fa fa-fw"></span> -->
-                <img src="http://codetoki.com/assets/v2.0/public/codetoki-favicon-31b57f23cb713f4b01cb870305200b7e.png" style="width: 18px; height: 18px;" />
+                <img src="http://codetoki.com/assets/v2.0/public/codetoki-favicon-31b57f23cb713f4b01cb870305200b7e.png" class="fa-fw" />
               </div>
               <!-- <div class="title pull-right">Codetoki</div> -->
-              <div class="description pull-right"><a href="http://codetoki.com/profile/ryan-i-eballar" target="_blank">Codetoki</a></div>
+              <div class="description pull-right">
+                <a href="http://codetoki.com/profile/ryan-i-eballar" target="_blank" style="position: relative; top: 10px" class="no-print">Codetoki</a>
+                <span class="show-print" style="display: none">Codetoki:<br>http://codetoki.com/profile/ryan-i-eballar</span>
+              </div>
             </div>
           </div>
           <!-- SKILLS -->
-          <div class="box">
+          <div class="box skills">
             <h2><i class="fa fa-tasks ico"></i> Skills</h2>
             <div class="skills clearfix">
               <div class="item-skills">
